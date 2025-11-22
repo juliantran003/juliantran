@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Hell",
+    "type": "score",
+    "url": "hell",
+    "release": "2025",
+    "watch": "https://www.nowness.com/series/nowness-experiments/hell-tom-brett",
+    "listen": "https://distrokid.com/hyperfollow/juliantran/hell",
+    "artwork": "/img/artwork/hell.jpg",
+    "gif": "/img/gif/hell.gif",
+    "director": "Tom Brett",
+    "audio": "/audio/hell.mp3"
+  },
+  {
+    "title": "Your Touch Underwater",
+    "type": "single",
+    "url": "underwater",
+    "release": "2025",
+    "listen": "https://distrokid.com/hyperfollow/juliantran/your-touch-underwater-3",
+    "artwork": "/img/artwork/underwater.png",
+    "design": "Tom Brett",
+    "audio": "/audio/ytu.mp3"
+  },
+  {
+    "title": "Everything About You",
+    "type": "single",
+    "url": "everything",
+    "release": "2025",
+    "listen": "https://distrokid.com/hyperfollow/juliantran/everything-about-you",
+    "artwork": "/img/artwork/everything.png",
+    "design": "Tom Brett",
+    "audio": "/audio/everything.mp3"
+  },
+  {
+    "title": "Soft Reset",
+    "type": "soundpiece",
+    "url": "softreset",
+    "release": "2025",
+    "watch": "https://hannepeeraer.co.uk/",
+    "artwork": "/img/artwork/softreset.png",
+    "gif": "/img/gif/soft-reset.gif",
+    "artist": "Hanne Pearer",
+    "audio": "/audio/soft.mp3"
+  },
+  {
+    "title": "Chapel Drive",
+    "type": "single",
+    "url": "chapeldrive",
+    "release": "2024",
+    "listen": "https://distrokid.com/hyperfollow/juliantran/chapel-drive",
+    "artwork": "/img/artwork/chapeldrive.jpg",
+    "design": "Madeline Woods",
+    "audio": "/audio/chapel.mp3"
+  },
+  {
+    "title": "Coast to Coast (Preamble)",
+    "type": "score",
+    "url": "coast",
+    "release": "2023",
+    "watch": "https://zeyuanren.com/Coast-to-Coast-Preamble",
+    "artwork": "/img/artwork/coast2.png",
+    "gif": "/img/gif/coast.gif",
+    "director": "Zeyuan Ren",
+    "audio": "/audio/coast.mp3"
+  },
+  {
+    "title": "Everything Comes Full Circle",
+    "type": "score",
+    "url": "ecfc",
+    "release": "2023",
+    "watch": "https://lilanyang.studio/ecfc.html",
+    "listen": "https://distrokid.com/hyperfollow/juliantran/lilan-2",
+    "artwork": "/img/artwork/ecfc.png",
+    "gif": "/img/gif/ecfc.gif",
+    "director": "Lilan Yang",
+    "audio": "/audio/ecfc.mp3"
+  },
+  {
+    "title": "FANTASY UNLIMITED : PART I - IV",
+    "type": "album",
+    "url": "fantasy",
+    "release": "2023",
+    "artwork": "/img/artwork/fu1.png",
+    "design": "Tom Brett",
+    "audio": "/audio/fu.mp3",
+    "listen": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited--part-i-2",
+    "collection": [
+      {
+        "number": 1,
+        "artwork": "/img/artwork/fu1.png",
+        "url": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited--part-i-2"
+      },
+      {
+        "number": 2,
+        "artwork": "/img/artwork/fu2.png",
+        "url": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited--part-ii"
+      },
+      {
+        "number": 3,
+        "artwork": "/img/artwork/fu3.png",
+        "url": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited--part-iii-2"
+      },
+      {
+        "number": 4,
+        "artwork": "/img/artwork/fu4.png",
+        "url": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited--part-iv"
+      }
+    ]
+  },
+  {
+    "title": "Another Day",
+    "type": "single",
+    "url": "anotherday",
+    "release": "2023",
+    "listen": "https://distrokid.com/hyperfollow/juliantran/another-day",
+    "artwork": "/img/artwork/anotherday.png",
+    "design": "Tom Brett",
+    "audio": "/audio/another.mp3"
+  },
+  {
+    "title": "Riku's Valley",
+    "type": "score",
+    "url": "riku",
+    "release": "2022",
+    "listen": "https://distrokid.com/hyperfollow/juliantran/rikus-valley",
+    "watch": "https://thomas-brett.itch.io/rikusvalley",
+    "artwork": "/img/artwork/riku1.png",
+    "gif": "/img/gif/riku.gif",
+    "director": "Tom Brett",
+    "audio": "/audio/riku.mp3"
+  },
+  {
+    "title": "Misery",
+    "type": "album",
+    "url": "misery",
+    "release": "2021",
+    "listen": "https://distrokid.com/hyperfollow/juliantran/misery",
+    "artwork": "/img/artwork/misery.png",
+    "design": "Tom Brett",
+    "audio": "/audio/interlude.mp3"
+  }
+]
