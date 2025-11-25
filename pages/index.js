@@ -79,6 +79,9 @@ export default function Home() {
                 height: 100vh;
                 background-size: cover;
                 background-position: center;
+                content: url("/img/gif/hell.gif") url("/img/gif/soft-reset.gif")
+                  url("/img/gif/coast.gif") url("/img/gif/ecfc.gif")
+                  url("/img/gif/riku.gif");
               }
               .menu > button {
                 color: var(--main-background-color);
@@ -127,7 +130,12 @@ export default function Home() {
         {select && (
           <div className="home_container">
             <div className="home_img">
-              <Image src={select.artwork} fill alt={select.title} />
+              <Image
+                src={select.artwork}
+                fill
+                alt={select.title}
+                priority={true}
+              />
             </div>
             <div className="home_info">
               <p className="details">

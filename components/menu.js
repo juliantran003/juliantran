@@ -7,6 +7,9 @@ export default function Menu({ setSelect }) {
   const hoverHandle = (work) => {
     setSelect(work);
   };
+  const exitHandle = (work) => {
+    // setSelect();
+  };
 
   return (
     <menu className="menu">
@@ -16,8 +19,18 @@ export default function Menu({ setSelect }) {
 
           // onMouseLeave={() => setSelect()}
           >
-            <p onMouseOver={() => hoverHandle(work)}>{work.title}</p>
-            <span onMouseOver={() => setSelect(work)}> {work.type}</span>
+            <p
+              onMouseOver={() => hoverHandle(work)}
+              onMouseLeave={() => exitHandle(work)}
+            >
+              {work.title}
+            </p>
+            <span
+              onMouseOver={() => hoverHandle(work)}
+              onMouseLeave={() => exitHandle(work)}
+            >
+              {work.type}
+            </span>
           </button>
         );
       })}
