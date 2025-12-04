@@ -8,6 +8,8 @@ import Link from "next/link";
 
 export default function Home() {
   const [select, setSelect] = useState();
+  const [clicked, setClicked] = useState();
+  const [muted, setMuted] = useState(false);
 
   return (
     <>
@@ -15,123 +17,92 @@ export default function Home() {
         <style jsx global>
           {`
             body {
-              background-image: url("/img/gif/hell.gif");
               height: 100vh;
               background-size: cover;
               background-position: center;
             }
-            .menu > button {
-              color: var(--main-background-color);
-              opacity: 0.8;
-            }
-            .playing {
-              color: var(--main-background-color);
-            }
-            .button1 {
-              color: var(--main-background-color);
-            }
-            .button2 {
-              color: var(--main-background-color);
-              opacity: 0.8;
-            }
-            .info {
-              color: var(--main-background-color);
-              opacity: 0.85;
-            }
-            .overview {
-              color: var(--main-background-color);
-              opacity: 0.8;
-            }
-            .dotted {
-              border-bottom: 1px dashed var(--main-background-color);
-            }
-            .credits {
-              color: var(--main-background-color);
-              opacity: 0.8;
-            }
-            .details {
-              color: var(--main-background-color);
-              opacity: 0.8;
-            }
-            .home_info h1 {
-              color: var(--main-background-color);
+            .home_img {
+              height: 250px;
+              width: 350px;
             }
           `}
         </style>
       )}
-      {select &&
-        (select.type === "single" || select.type === "album" ? (
-          <style jsx global>
-            {`
-              body {
-                background-color: var(--main-background-color);
-              }
-              .button1 {
-                color: var(--main-background-color-inverted);
-              }
-            `}
-          </style>
-        ) : (
-          <style jsx global>
-            {`
-              body {
-                background-image: url(${select.gif});
-                height: 100vh;
-                background-size: cover;
-                background-position: center;
-                content: url("/img/gif/hell.gif") url("/img/gif/soft-reset.gif")
-                  url("/img/gif/coast.gif") url("/img/gif/ecfc.gif")
-                  url("/img/gif/riku.gif");
-              }
-              .menu > button {
-                color: var(--main-background-color);
-                opacity: 0.8;
-              }
-              .playing {
-                color: var(--main-background-color);
-              }
-              .button1 {
-                color: var(--main-background-color);
-              }
-              .button2 {
-                color: var(--main-background-color);
-                opacity: 0.8;
-              }
-              .info {
-                color: var(--main-background-color);
-                opacity: 0.85;
-              }
-              .overview {
-                color: var(--main-background-color);
-                opacity: 0.8;
-              }
-              .dotted {
-                border-bottom: 1px dashed var(--main-background-color);
-              }
-              .credits {
-                color: var(--main-background-color);
-                opacity: 0.8;
-              }
-              .details {
-                color: var(--main-background-color);
-                opacity: 0.8;
-              }
-              .home_info h1 {
-                color: var(--main-background-color);
-              }
-            `}
-          </style>
-        ))}
-      <Header select={select} setSelect={setSelect} />
+      {select && select.type === "score" ? (
+        <style jsx global>
+          {`
+          .home_img {
+height: 250px;
+  width: 350px;
 
-      <Menu setSelect={setSelect} />
-      <Footer />
+
+}
+            }
+          `}
+        </style>
+      ) : (
+        <style jsx global>
+          {`
+          .home_img {
+
+  width: 200px;
+
+
+}
+  
+            }
+          `}
+        </style>
+      )}
+      {select && select.type === "soundpiece" ? (
+        <style jsx global>
+          {`
+          .home_img {
+height: 250px;
+  width: 350px;
+
+
+}
+            }
+          `}
+        </style>
+      ) : (
+        <style jsx global>
+          {`
+          .home_img {
+
+  width: 200px;
+
+
+}
+  
+            }
+          `}
+        </style>
+      )}
+      <Header
+        select={select}
+        setSelect={setSelect}
+        clicked={clicked}
+        muted={muted}
+        setMuted={setMuted}
+      />
+
+      <Menu
+        setSelect={setSelect}
+        setClicked={setClicked}
+        select={select}
+        clicked={clicked}
+        muted={muted}
+        setMuted={setMuted}
+      />
+      <Footer select={select} setSelect={setSelect} muted={muted} />
       <main className="home">
         {select && (
           <div className="home_container">
             <div className="home_img">
               <Image
-                src={select.artwork}
+                src={select.gif ? select.gif : select.artwork}
                 fill
                 alt={select.title}
                 priority={true}
@@ -168,14 +139,23 @@ export default function Home() {
         )}
         {!select && (
           <div className="home_container">
+            <div className="home_img_hero">
+              <Image
+                src={"/img/gif/hell.gif"}
+                fill
+                alt="hell"
+                priority={true}
+              />
+            </div>
             <div className="home_info">
               <p className="details">
-                LATEST RELEASE
+                2025
                 <br></br>
+                score
               </p>
               <h1>Hell</h1>
               <p className="credits">
-                film directed by tom brett
+                film directed by Tom Brett
                 <br></br>
                 score written & produced by Julian Tran
               </p>

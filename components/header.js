@@ -10,14 +10,15 @@ import audioonlight from "../public/img/misc/audio-on-light.png";
 import audioofflight from "../public/img/misc/audio-off-light.png";
 import { useState } from "react";
 
-export default function Header({ select, setSelect }) {
-  const [mute, setMute] = useState(true);
+export default function Header({
+  select,
+  setSelect,
+  clicked,
+  muted,
+  setMuted,
+}) {
   const muteFunction = () => {
-    if (mute === false) {
-      setMute(true);
-    } else {
-      setMute(false);
-    }
+    setMuted(!muted);
   };
   const pathname = usePathname();
   return (
@@ -27,11 +28,11 @@ export default function Header({ select, setSelect }) {
           <div className="header_logo" onClick={() => setSelect()}>
             <Image src={logo} fill alt="logo" />
           </div>
-          {select && (
+          {/* {select && (
             <button className="button2" onClick={() => setSelect()}>
               LATEST RELEASE
             </button>
-          )}
+          )} */}
         </div>
 
         <div className="header_info">
@@ -50,34 +51,11 @@ export default function Header({ select, setSelect }) {
             </p>
           </div>
           <div className="header_mute" onClick={() => muteFunction()}>
-            {select ? (
-              select.type === "single" || select.type === "album" ? (
-                <Image
-                  src={mute === false ? audioondark : audiooffdark}
-                  fill
-                  alt="mute/unmute"
-                />
-              ) : (
-                <Image
-                  src={mute === false ? audioonlight : audioofflight}
-                  fill
-                  alt="mute/unmute"
-                />
-              )
-            ) : (
-              <Image
-                src={mute === false ? audioondark : audiooffdark}
-                fill
-                alt="mute/unmute"
-              />
-            )}
-            {!select && (
-              <Image
-                src={mute === false ? audioonlight : audioofflight}
-                fill
-                alt="mute/unmute"
-              />
-            )}
+            <Image
+              src={muted === false ? audioondark : audiooffdark}
+              fill
+              alt="mute/unmute"
+            />
           </div>
           <button className="button1">contact</button>
         </div>

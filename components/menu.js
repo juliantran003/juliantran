@@ -3,34 +3,37 @@
 // Imports
 import work from "../public/json/work.json";
 
-export default function Menu({ setSelect }) {
-  const hoverHandle = (work) => {
-    setSelect(work);
-  };
-  const exitHandle = (work) => {
-    // setSelect();
-  };
+import useHoverAudio from "./useHoverAudio";
+
+export default function Menu({
+  setSelect,
+  select,
+  clicked,
+  setClicked,
+  muted,
+}) {
+  const { playHoverSound, stopHoverSound } = useHoverAudio();
 
   return (
     <menu className="menu">
       {work.map((work) => {
         return (
           <button
-
-          // onMouseLeave={() => setSelect()}
+            onClick={() => {
+              setClicked(work);
+              setSelect(work);
+            }}
+            onMouseEnter={() => {
+              setSelect(work);
+              if (!muted) {
+                playHoverSound(work.audio);
+              }
+            }}
+            onMouseLeave={stopHoverSound}
+            // onMouseLeave={() => setSelect()}
           >
-            <p
-              onMouseOver={() => hoverHandle(work)}
-              onMouseLeave={() => exitHandle(work)}
-            >
-              {work.title}
-            </p>
-            <span
-              onMouseOver={() => hoverHandle(work)}
-              onMouseLeave={() => exitHandle(work)}
-            >
-              {work.type}
-            </span>
+            <p>{work.title}</p>
+            <span>{work.type}</span>
           </button>
         );
       })}

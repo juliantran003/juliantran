@@ -48,6 +48,7 @@ body {
   background: none;
   font-size: 14px;
   cursor: pointer;
+  color: var(--main-background-color-inverted);
 }
 
 .button2 {
@@ -58,6 +59,7 @@ body {
   font-size: 14px;
   cursor: pointer;
   opacity: 0.6;
+  color: var(--main-background-color-inverted);
 }
 .button2:hover {
   font-family: "Tobias Light Italic";
@@ -93,6 +95,7 @@ body {
   justify-content: space-between;
   align-items: center;
   /* width: 30vw; */
+  color: var(--main-background-color-inverted);
 }
 
 .playing_container {
@@ -167,7 +170,7 @@ body {
   cursor: pointer;
   transition: ease-in-out 0.1s;
   opacity: 0.3;
-
+  color: var(--main-background-color-inverted);
   width: fit-content;
 }
 
@@ -196,21 +199,25 @@ body {
   bottom: 0;
   left: 0;
   width: 100vw;
+  z-index: 1;
 }
 .footer_container {
   margin: 0 auto;
   padding: 0px 50px 20px 50px;
   display: flex;
+  align-items: flex-end;
 }
 .overview {
-  width: 60%;
+  width: 55%;
   flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  opacity: 0.5;
+
+  color: var(--main-background-color-inverted);
 }
 .overview > div {
+  opacity: 0.5;
   width: auto;
   margin-top: -12px;
   white-space: nowrap;
@@ -224,6 +231,16 @@ body {
   padding-left: 0px;
 }
 
+.overview_highlighted:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.overview_clicked {
+  opacity: 1 !important;
+
+  cursor: pointer;
+}
+
 .dotted {
   margin-bottom: 12px;
   flex: 2;
@@ -233,13 +250,15 @@ body {
 }
 
 .info {
+  padding-bottom: 20px;
   width: 35%;
   font-family: "Tobias Thin";
   font-size: 14px;
   text-transform: lowercase;
-  margin-top: -6px;
+  margin-top: -14px;
   opacity: 0.6;
   margin-left: 2%;
+  color: var(--main-background-color-inverted);
   line-height: 14px;
 }
 
@@ -248,9 +267,9 @@ body {
   justify-content: flex-end;
   position: relative;
   width: 100px;
-  height: 100px;
-  margin-top: -20px;
-  margin-right: -3vw;
+  height: 180px;
+  margin-bottom: 0px;
+  margin-right: -2vw;
   padding-left: 5%;
 }
 .tree > img {
@@ -277,17 +296,30 @@ body {
   align-items: flex-start;
   justify-content: center;
   padding-left: 2vw;
+  color: var(--main-background-color-inverted);
 }
 .home_info h1 {
   font-family: "Aqala";
   font-size: 44px;
+  color: var(--main-background-color-inverted);
 }
 .home_img {
   position: relative;
   width: 200px;
   height: 200px;
+
+  transition: width 0.08s ease-out;
 }
+
 .home_img > img {
+  object-fit: cover;
+}
+.home_img_hero {
+  position: relative;
+  height: 250px;
+  width: 350px;
+}
+.home_img_hero > img {
   object-fit: cover;
 }
 .home_buttons {

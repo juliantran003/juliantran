@@ -9,7 +9,7 @@
     "artwork": "/img/artwork/hell.jpg",
     "gif": "/img/gif/hell.gif",
     "director": "Tom Brett",
-    "audio": "/audio/hell.mp3"
+    "audio": "/audio/hell.m4a"
   },
   {
     "title": "Your Touch Underwater",
@@ -19,7 +19,7 @@
     "listen": "https://distrokid.com/hyperfollow/juliantran/your-touch-underwater-3",
     "artwork": "/img/artwork/underwater.png",
     "design": "Tom Brett",
-    "audio": "/audio/ytu.mp3"
+    "audio": "/audio/ytu.m4a"
   },
   {
     "title": "Everything About You",
@@ -29,7 +29,7 @@
     "listen": "https://distrokid.com/hyperfollow/juliantran/everything-about-you",
     "artwork": "/img/artwork/everything.png",
     "design": "Tom Brett",
-    "audio": "/audio/everything.mp3"
+    "audio": "/audio/everything.m4a"
   },
   {
     "title": "Soft Reset",
@@ -40,7 +40,7 @@
     "artwork": "/img/artwork/softreset.png",
     "gif": "/img/gif/soft-reset.gif",
     "artist": "Hanne Pearer",
-    "audio": "/audio/soft.mp3"
+    "audio": "/audio/soft.m4a"
   },
   {
     "title": "Chapel Drive",
@@ -50,10 +50,10 @@
     "listen": "https://distrokid.com/hyperfollow/juliantran/chapel-drive",
     "artwork": "/img/artwork/chapeldrive.jpg",
     "design": "Madeline Woods",
-    "audio": "/audio/chapel.mp3"
+    "audio": "/audio/chapel.m4a"
   },
   {
-    "title": "Coast to Coast (Preamble)",
+    "title": "Coast to Coast",
     "type": "score",
     "url": "coast",
     "release": "2023",
@@ -61,10 +61,10 @@
     "artwork": "/img/artwork/coast2.png",
     "gif": "/img/gif/coast.gif",
     "director": "Zeyuan Ren",
-    "audio": "/audio/coast.mp3"
+    "audio": "/audio/coast.m4a"
   },
   {
-    "title": "Everything Comes Full Circle",
+    "title": "Ecfc",
     "type": "score",
     "url": "ecfc",
     "release": "2023",
@@ -73,16 +73,16 @@
     "artwork": "/img/artwork/ecfc.png",
     "gif": "/img/gif/ecfc.gif",
     "director": "Lilan Yang",
-    "audio": "/audio/ecfc.mp3"
+    "audio": "/audio/ecfc.m4a"
   },
   {
-    "title": "FANTASY UNLIMITED : PART I - IV",
+    "title": "Fantasy Unlimited ",
     "type": "album",
     "url": "fantasy",
     "release": "2023",
     "artwork": "/img/artwork/fu1.png",
     "design": "Tom Brett",
-    "audio": "/audio/fu.mp3",
+    "audio": "/audio/fu.m4a",
     "listen": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited--part-i-2",
     "collection": [
       {
@@ -115,7 +115,7 @@
     "listen": "https://distrokid.com/hyperfollow/juliantran/another-day",
     "artwork": "/img/artwork/anotherday.png",
     "design": "Tom Brett",
-    "audio": "/audio/another.mp3"
+    "audio": "/audio/another.m4a"
   },
   {
     "title": "Riku's Valley",
@@ -127,7 +127,7 @@
     "artwork": "/img/artwork/riku1.png",
     "gif": "/img/gif/riku.gif",
     "director": "Tom Brett",
-    "audio": "/audio/riku.mp3"
+    "audio": "/audio/riku.m4a"
   },
   {
     "title": "Misery",
@@ -137,6 +137,6 @@
     "listen": "https://distrokid.com/hyperfollow/juliantran/misery",
     "artwork": "/img/artwork/misery.png",
     "design": "Tom Brett",
-    "audio": "/audio/interlude.mp3"
+    "audio": "/audio/interlude.m4a"
   }
 ]
