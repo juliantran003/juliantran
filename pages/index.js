@@ -105,7 +105,7 @@ height: 250px;
                 src={select.gif ? select.gif : select.artwork}
                 fill
                 alt={select.title}
-                priority={true}
+                priority
               />
             </div>
             <div className="home_info">
