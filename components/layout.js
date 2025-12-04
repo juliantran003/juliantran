@@ -1,5 +1,6 @@
 // IMPORTS
 import Head from "next/head";
+import work from "../public/json/work.json";
 
 export default function Layout({ children }) {
   return (
@@ -32,7 +33,16 @@ export default function Layout({ children }) {
           sizes="<generated>"
         />
       </Head>
-
+      <Head>
+        {work.map((work) => {
+          return <link rel="preload" as="image" href={work.artwork} />;
+        })}
+      </Head>
+      <Head>
+        {work.map((work) => {
+          return <link rel="preload" as="audio" href={work.audio} />;
+        })}
+      </Head>
       <main>{children}</main>
     </>
   );
