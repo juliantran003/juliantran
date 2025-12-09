@@ -28,11 +28,11 @@ export default function Header({
           <div className="header_logo" onClick={() => setSelect()}>
             <Image src={logo} fill alt="logo" />
           </div>
-          {/* {select && (
+          {select && (
             <button className="button2" onClick={() => setSelect()}>
               LATEST RELEASE
             </button>
-          )} */}
+          )}
         </div>
 
         <div className="header_info">
@@ -50,13 +50,23 @@ export default function Header({
               </span>
             </p>
           </div>
-          <div className="header_mute" onClick={() => muteFunction()}>
-            <Image
-              src={muted === false ? audioondark : audiooffdark}
-              fill
-              alt="mute/unmute"
-            />
-          </div>
+          {!select ? (
+            <div className="header_mute" onClick={() => muteFunction()}>
+              <Image
+                src={muted === false ? audioonlight : audioofflight}
+                fill
+                alt="mute/unmute"
+              />
+            </div>
+          ) : (
+            <div className="header_mute" onClick={() => muteFunction()}>
+              <Image
+                src={muted === false ? audioondark : audiooffdark}
+                fill
+                alt="mute/unmute"
+              />
+            </div>
+          )}
           <button className="button1">contact</button>
         </div>
       </div>

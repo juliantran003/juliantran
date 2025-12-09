@@ -9,10 +9,47 @@ import Link from "next/link";
 export default function Home() {
   const [select, setSelect] = useState();
   const [clicked, setClicked] = useState();
-  const [muted, setMuted] = useState(false);
+  const [muted, setMuted] = useState(true);
 
   return (
     <>
+      {!select && (
+        <style jsx global>
+          {`
+            body {
+              height: 100vh;
+              background-image: url("/img/gif/hell.gif");
+              background-size: cover;
+              background-position: center;
+            }
+            .home_info {
+              color: var(--main-background-color);
+            }
+
+            .home_info h1 {
+              color: var(--main-background-color);
+            }
+            .button1 {
+              color: var(--main-background-color);
+            }
+            .overview {
+              color: var(--main-background-color);
+            }
+            .dotted {
+              border-bottom: 1px dashed var(--main-background-color);
+            }
+            .info {
+              color: var(--main-background-color);
+            }
+            .menu > button {
+              color: var(--main-background-color);
+            }
+            .header_info {
+              color: var(--main-background-color);
+            }
+          `}
+        </style>
+      )}
       {/* {!select && (
         <style jsx global>
           {`
@@ -139,19 +176,19 @@ height: 250px;
         )}
         {!select && (
           <div className="home_container">
-            <div className="home_img_hero">
+            {/* <div className="home_img_hero">
               <Image
                 src={"/img/gif/hell.gif"}
                 fill
                 alt="hell"
                 priority={true}
               />
-            </div>
+            </div> */}
             <div className="home_info">
               <p className="details">
-                2025
-                <br></br>
-                score
+                Latest Release
+                {/* <br></br> */}
+                {/* score */}
               </p>
               <h1>Hell</h1>
               <p className="credits">
