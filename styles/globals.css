@@ -100,7 +100,7 @@ body {
 
 .playing_container {
   padding-bottom: 12px;
-  opacity: 0.6;
+  opacity: 0.8;
   display: flex;
   justify-content: flex-end;
 }
@@ -217,7 +217,7 @@ body {
   color: var(--main-background-color-inverted);
 }
 .overview > div {
-  opacity: 0.5;
+  opacity: 0.3;
   width: auto;
   margin-top: -12px;
   white-space: nowrap;
@@ -316,8 +316,8 @@ body {
 }
 .home_img_hero {
   position: relative;
-  height: 250px;
-  width: 350px;
+  height: 200px;
+  width: 200px;
 }
 .home_img_hero > img {
   object-fit: cover;

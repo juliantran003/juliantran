@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      {!select && (
+      {/* {!select && (
         <style jsx global>
           {`
             body {
@@ -79,7 +79,7 @@ height: 250px;
             }
           `}
         </style>
-      )}
+      )} */}
       <Header
         select={select}
         setSelect={setSelect}
