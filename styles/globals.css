@@ -300,13 +300,13 @@ body {
 }
 .home_info h1 {
   font-family: "Aqala";
-  font-size: 52px;
+  font-size: 50px;
   color: var(--main-background-color-inverted);
 }
 .home_img {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 275px;
+  height: 275px;
 
   transition: width 0.08s ease-out;
 }
@@ -316,8 +316,8 @@ body {
 }
 .home_img_hero {
   position: relative;
-  height: 300px;
-  width: 300px;
+  height: 275px;
+  width: 275px;
 }
 .home_img_hero > img {
   object-fit: cover;
@@ -336,12 +336,12 @@ body {
   margin-bottom: 10px;
   font-family: "Tobias Thin";
   opacity: 0.5;
-  font-size: 20px;
+  font-size: 18px;
 }
 .credits {
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: "Tobias Thin";
   opacity: 0.5;
-  font-size: 20px;
+  font-size: 18px;
 }
