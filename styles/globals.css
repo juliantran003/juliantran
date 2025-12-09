@@ -300,13 +300,13 @@ body {
 }
 .home_info h1 {
   font-family: "Aqala";
-  font-size: 48px;
+  font-size: 52px;
   color: var(--main-background-color-inverted);
 }
 .home_img {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
 
   transition: width 0.08s ease-out;
 }
@@ -316,8 +316,8 @@ body {
 }
 .home_img_hero {
   position: relative;
-  height: 250px;
-  width: 250px;
+  height: 300px;
+  width: 300px;
 }
 .home_img_hero > img {
   object-fit: cover;
