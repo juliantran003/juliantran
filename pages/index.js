@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      {!select && (
+      {/* {!select && (
         <style jsx global>
           {`
             body {
@@ -49,7 +49,7 @@ export default function Home() {
             }
           `}
         </style>
-      )}
+      )} */}
       {/* {!select && (
         <style jsx global>
           {`
@@ -176,19 +176,19 @@ height: 250px;
         )}
         {!select && (
           <div className="home_container">
-            {/* <div className="home_img_hero">
+            <div className="home_img_hero">
               <Image
                 src={"/img/gif/hell.gif"}
                 fill
                 alt="hell"
                 priority={true}
               />
-            </div> */}
+            </div>
             <div className="home_info">
               <p className="details">
-                Latest Release
-                {/* <br></br> */}
-                {/* score */}
+                2025
+                <br></br>
+                score
               </p>
               <h1>Hell</h1>
               <p className="credits">
