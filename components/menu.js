@@ -11,17 +11,25 @@ export default function Menu({
   clicked,
   setClicked,
   muted,
+  setMuted,
 }) {
   const { playHoverSound, stopHoverSound } = useHoverAudio();
 
+  const clickHandle = (work) => {
+    setClicked(work);
+    setSelect(work);
+    if (muted) {
+      setMuted(false);
+      playHoverSound(work.audio);
+    }
+  };
   return (
     <menu className="menu">
       {work.map((work) => {
         return (
           <button
             onClick={() => {
-              setClicked(work);
-              setSelect(work);
+              clickHandle(work);
             }}
             onMouseEnter={() => {
               setSelect(work);
