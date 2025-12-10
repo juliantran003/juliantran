@@ -23,6 +23,16 @@ export default function Header({
   const pathname = usePathname();
   return (
     <header className="header">
+      {/* MOBILE */}
+      <div className="mobileHeader_container">
+        <button className="button1">info</button>
+        <div className="header_logo" onClick={() => setSelect()}>
+          <Image src={logo} fill alt="logo" />
+        </div>
+        <button className="button1">contact</button>
+      </div>
+
+      {/* DESKTOP */}
       <div className="header_container">
         <div>
           <div className="header_logo" onClick={() => setSelect()}>

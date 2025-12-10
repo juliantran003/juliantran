@@ -142,6 +142,17 @@ body {
   opacity: 0.8;
 }
 
+.mobileHeader_container {
+  display: none;
+  justify-content: center;
+  padding-top: 25px;
+  align-items: center;
+}
+.mobileHeader_container > button {
+  width: 12vw;
+  font-size: 16px;
+}
+
 /* Menu */
 
 .menu {
@@ -345,4 +356,180 @@ body {
   font-family: "Tobias Thin";
   opacity: 0.5;
   font-size: 16px;
+}
+.mobileHome {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+}
+.mobileHome_tree {
+  position: relative;
+  height: 90vh;
+  width: 140vw;
+
+  margin-left: -22vw;
+  margin-bottom: -13vh;
+  transform: rotate(-1.25deg);
+}
+
+.mobileHome_tree > img {
+  object-fit: contain;
+}
+
+.mobileWorkModal {
+  position: fixed;
+  top: 100px;
+  left: 10vw;
+  width: 80vw;
+  height: 600px;
+  border: solid 1px var(--main-background-color-inverted);
+  background-color: var(--main-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobileWorkModal p {
+  font-family: "Tobias Thin";
+  opacity: 0.6;
+  text-align: center;
+  margin: 25px 0 5px 0;
+  font-size: 14px;
+}
+.mobileWorkModal h1 {
+  font-family: "Aqala";
+  font-size: 24px;
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 0px;
+}
+.mobileWorkModal_img {
+  margin-top: 25px;
+  position: relative;
+  height: 290px;
+  width: 290px;
+  border: solid 1px var(--main-background-color-inverted);
+}
+.mobileWorkModal_img > img {
+  object-fit: cover;
+}
+
+.mobileX {
+  cursor: pointer;
+  position: absolute;
+  top: 2%;
+  right: 4%;
+  text-align: center;
+  padding: 0px 5px 3px 6px;
+  border: solid 1px var(--main-background-color-inverted);
+  font-family: "Tobias Thin";
+  z-index: 2;
+  background-color: var(--main-background-color);
+}
+.mobileWorkModal_links {
+  margin-top: 20px;
+}
+.mobileWorkModal_links > a {
+  margin: 0 10px;
+}
+.mobileWorkModal_nav {
+  position: absolute;
+  bottom: 2vh;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobileWorkModal_nav > button {
+  width: 15%;
+}
+.mobileWorkModal_nav > button:nth-child(1) {
+  text-align: start;
+}
+.mobileWorkModal_nav > button:nth-child(2) {
+  text-align: center;
+}
+.mobileWorkModal_nav > button:nth-child(3) {
+  text-align: end;
+}
+
+.mobileMenu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8vh;
+  align-items: center;
+}
+
+.mobileMenu > button {
+  padding: 2px 5px;
+  font-size: 14px;
+  border-radius: 0px;
+  border: solid var(--main-background-color-inverted) 0.7px;
+  width: fit-content;
+  font-family: "Tobias Thin";
+  background-color: var(--main-background-color);
+  margin-top: 3vh;
+  cursor: pointer;
+  color: var(--main-background-color-inverted);
+}
+
+.mobileMenu > button:nth-child(1) {
+  margin-left: -30vw;
+}
+.mobileMenu > button:nth-child(2) {
+  margin-right: -20vw;
+}
+.mobileMenu > button:nth-child(3) {
+  margin-right: 0;
+}
+.mobileMenu > button:nth-child(4) {
+  margin-right: -30vw;
+}
+
+.mobileMenu > button:nth-child(5) {
+  margin-left: -0vw;
+}
+.mobileMenu > button:nth-child(6) {
+  margin-right: -40vw;
+}
+.mobileMenu > button:nth-child(7) {
+  margin-right: -0vw;
+}
+.mobileMenu > button:nth-child(8) {
+  margin-right: -30vw;
+}
+.mobileMenu > button:nth-child(9) {
+  margin-right: -2vw;
+}
+.mobileMenu > button:nth-child(10) {
+  margin-right: -40vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    display: none;
+  }
+  .mobileHome {
+    display: flex;
+  }
+  .menu {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+
+  .header_container {
+    display: none;
+  }
+  .mobileHeader_container {
+    display: flex;
+  }
 }

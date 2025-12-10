@@ -22,6 +22,10 @@ export default function Menu({
       setMuted(false);
       playHoverSound(work.audio);
     }
+    if (!muted) {
+      setMuted(true);
+      stopHoverSound(work.audio);
+    }
   };
   return (
     <menu className="menu">

@@ -5,11 +5,15 @@ import Menu from "@/components/menu";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import tree from "../public/img/misc/menuTree.png";
+import MobileMenu from "@/components/mobileMenu";
+import MobileWorkModal from "@/components/mobileWorkModal";
 
 export default function Home() {
   const [select, setSelect] = useState();
   const [clicked, setClicked] = useState();
   const [muted, setMuted] = useState(true);
+  const [modal, setModal] = useState(false);
 
   return (
     <>
@@ -134,6 +138,27 @@ height: 250px;
         setMuted={setMuted}
       />
       <Footer select={select} setSelect={setSelect} muted={muted} />
+      {/* MOBILE */}
+      <main className="mobileHome">
+        <div className="mobileHome_tree">
+          <Image src={tree} fill alt="tree" priority />
+        </div>
+        <MobileMenu
+          modal={modal}
+          setModal={setModal}
+          select={select}
+          setSelect={setSelect}
+        />
+        {select && (
+          <MobileWorkModal
+            modal={modal}
+            setModal={setModal}
+            select={select}
+            setSelect={setSelect}
+          />
+        )}
+      </main>
+      {/* DESKTOP */}
       <main className="home">
         {select && (
           <div className="home_container">
@@ -155,9 +180,10 @@ height: 250px;
               <p className="credits">
                 {select.director && `film directed by ${select.director}`}
                 {select.artist && `exhibtion by ${select.artist}`}
-                {select.design && `artwork by ${select.design}`}
-                <br></br>
+                {select.director && <br></br>}
+                {select.artist && <br></br>}
                 {select.type} written & produced by Julian Tran
+                <br></br> {select.design && `artwork by ${select.design}`}
               </p>
               <div className="home_buttons">
                 {select.listen && (
