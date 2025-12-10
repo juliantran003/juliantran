@@ -511,7 +511,60 @@ body {
 .mobileMenu > button:nth-child(10) {
   margin-right: -40vw;
 }
+@media only screen and (max-width: 1285px) {
+  .home_img {
+    width: 225px;
+    height: 225px;
+  }
+  .home_info h1 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 1090px) {
+  .home_img {
+    width: 175px;
+    height: 175px;
+  }
+  .home_info h1 {
+    font-size: 28px;
+  }
+  .menu > button {
+    font-size: 20px;
+  }
+  .overview > div {
+    font-size: 12px;
+  }
+  .info {
+    font-size: 12px;
+  }
+  .tree {
+    width: 80px;
+    height: 140px;
+  }
+}
 
+@media only screen and (max-width: 800px) {
+  .home_container {
+    flex-direction: column;
+  }
+  .home_info {
+    padding-top: 3vh;
+    padding-left: 0vw;
+  }
+  .details {
+    font-size: 14px;
+  }
+  .credits {
+    font-size: 14px;
+  }
+  .info {
+    font-size: 12px;
+    width: 80%;
+  }
+  .overview {
+    display: none;
+  }
+}
 @media only screen and (max-width: 600px) {
   .home {
     display: none;
