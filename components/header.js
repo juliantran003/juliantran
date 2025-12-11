@@ -16,6 +16,10 @@ export default function Header({
   clicked,
   muted,
   setMuted,
+  infoModal,
+  setInfoModal,
+  modal,
+  setModal,
 }) {
   const muteFunction = () => {
     setMuted(!muted);
@@ -25,7 +29,16 @@ export default function Header({
     <header className="header">
       {/* MOBILE */}
       <div className="mobileHeader_container">
-        <button className="button1">info</button>
+        <button
+          className="button1"
+          onClick={() => {
+            setInfoModal(!infoModal);
+            setSelect();
+            setModal(false);
+          }}
+        >
+          info
+        </button>
         <div className="header_logo" onClick={() => setSelect()}>
           <Image src={logo} fill alt="logo" />
         </div>

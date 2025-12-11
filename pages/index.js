@@ -8,12 +8,14 @@ import Link from "next/link";
 import tree from "../public/img/misc/menuTree.png";
 import MobileMenu from "@/components/mobileMenu";
 import MobileWorkModal from "@/components/mobileWorkModal";
+import MobileInfoModal from "@/components/mobileInfoModal";
 
 export default function Home() {
   const [select, setSelect] = useState();
   const [clicked, setClicked] = useState();
   const [muted, setMuted] = useState(true);
   const [modal, setModal] = useState(false);
+  const [infoModal, setInfoModal] = useState(false);
 
   return (
     <>
@@ -127,6 +129,10 @@ height: 250px;
         clicked={clicked}
         muted={muted}
         setMuted={setMuted}
+        infoModal={infoModal}
+        setInfoModal={setInfoModal}
+        modal={modal}
+        setModal={setModal}
       />
 
       <Menu
@@ -143,12 +149,22 @@ height: 250px;
         <div className="mobileHome_tree">
           <Image src={tree} fill alt="tree" priority />
         </div>
-        <MobileMenu
-          modal={modal}
-          setModal={setModal}
-          select={select}
-          setSelect={setSelect}
-        />
+        {infoModal && (
+          <MobileInfoModal
+            infoModal={infoModal}
+            setInfoModal={setInfoModal}
+            modal={modal}
+            setModal={setModal}
+          />
+        )}
+        {!modal && (
+          <MobileMenu
+            modal={modal}
+            setModal={setModal}
+            select={select}
+            setSelect={setSelect}
+          />
+        )}
         {select && (
           <MobileWorkModal
             modal={modal}
@@ -202,7 +218,7 @@ height: 250px;
         )}
         {!select && (
           <div className="home_container">
-            <div className="home_img_hero">
+            <div className="home_img">
               <Image
                 src={"/img/gif/hell.gif"}
                 fill

@@ -148,9 +148,16 @@ body {
   padding-top: 25px;
   align-items: center;
 }
+
+.mobileHeader_container img {
+  margin-left: -4px;
+}
 .mobileHeader_container > button {
-  width: 12vw;
+  width: 20%;
   font-size: 16px;
+}
+.mobileHeader_container > button:nth-child(1) {
+  margin-right: 12px;
 }
 
 /* Menu */
@@ -383,12 +390,13 @@ body {
   top: 100px;
   left: 10vw;
   width: 80vw;
-  height: 600px;
-  border: solid 1px var(--main-background-color-inverted);
+  height: 70vh;
+  border: solid 0.7px var(--main-background-color-inverted);
   background-color: var(--main-background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 }
 
 .mobileWorkModal p {
@@ -408,9 +416,9 @@ body {
 .mobileWorkModal_img {
   margin-top: 25px;
   position: relative;
-  height: 290px;
-  width: 290px;
-  border: solid 1px var(--main-background-color-inverted);
+  height: 60vw;
+  width: 60vw;
+  border: solid 0.7px var(--main-background-color-inverted);
 }
 .mobileWorkModal_img > img {
   object-fit: cover;
@@ -423,7 +431,7 @@ body {
   right: 4%;
   text-align: center;
   padding: 0px 5px 3px 6px;
-  border: solid 1px var(--main-background-color-inverted);
+  border: solid 0.7px var(--main-background-color-inverted);
   font-family: "Tobias Thin";
   z-index: 2;
   background-color: var(--main-background-color);
@@ -444,7 +452,8 @@ body {
 }
 
 .mobileWorkModal_nav > button {
-  width: 15%;
+  width: 30%;
+  font-family: "Tobias Thin Italic";
 }
 .mobileWorkModal_nav > button:nth-child(1) {
   text-align: start;
@@ -510,6 +519,35 @@ body {
 }
 .mobileMenu > button:nth-child(10) {
   margin-right: -40vw;
+}
+.mobileInfoModal {
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-family: "Tobias Light";
+  z-index: 2;
+}
+.mobileInfoModal p {
+  padding: 0 15vw;
+  margin-bottom: 40px;
+}
+.mobileInfoModal button {
+  margin-bottom: 0px;
+}
+.mobileInfoModal_img {
+  margin-top: 40px;
+  position: relative;
+  height: 80px;
+  width: 80px;
+  margin-bottom: 40px;
+}
+.mobileInfoModal_img > img {
+  object-fit: contain;
+}
+
+.mobileInfoModal_home_btn {
+  font-family: "Tobias Thin Italic";
 }
 @media only screen and (max-width: 1285px) {
   .home_img {
@@ -584,5 +622,45 @@ body {
   }
   .mobileHeader_container {
     display: flex;
+  }
+}
+@media only screen and (max-height: 500px) {
+  .footer {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
+}
+@media only screen and (max-height: 700px) {
+  .mobileMenu > button {
+    margin-top: 2vh;
+  }
+  .mobileWorkModal {
+    height: 70vh;
+    top: 80px;
+  }
+  .mobileWorkModal p {
+    margin: 15px 0 5px 0;
+    font-size: 12px;
+  }
+  .mobileWorkModal h1 {
+    font-size: 24px;
+  }
+  .mobileWorkModal_img {
+    height: 50vw;
+    width: 50vw;
+  }
+  .mobileWorkModal_links > a {
+    font-size: 14px;
+  }
+  .mobileHeader_container > button {
+    font-size: 14px;
+  }
+  .mobileHeader_container {
+    padding-top: 15px;
+  }
+  .mobileWorkModal_links {
+    margin-top: 15px;
   }
 }
