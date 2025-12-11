@@ -663,4 +663,9 @@ body {
   .mobileWorkModal_links {
     margin-top: 15px;
   }
+  .mobileHome_tree {
+    height: 80vh;
+    width: 140vw;
+    margin-bottom: -6vh;
+  }
 }
