@@ -171,6 +171,8 @@ height: 250px;
             setModal={setModal}
             select={select}
             setSelect={setSelect}
+            muted={muted}
+            setMuted={setMuted}
           />
         )}
       </main>

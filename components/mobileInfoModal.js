@@ -32,6 +32,20 @@ export default function MobileInfoModal({
       >
         bandcamp
       </a>
+      <a
+        className="button1"
+        href="https://open.spotify.com/artist/56WB4onpbv1NmX2XNzPp8Q?si=c6PKZP-XS_KJcr3bW4tiCw"
+        target="_blank"
+      >
+        spotify
+      </a>
+      <a
+        className="button1"
+        href="https://music.apple.com/us/artist/julian-tran/1539405644"
+        target="_blank"
+      >
+        apple music
+      </a>
 
       <div className="mobileInfoModal_img">
         <Image src={infoImg} fill priority={true} />

@@ -465,6 +465,15 @@ body {
   text-align: end;
 }
 
+.mobileWorkModal_mute {
+  position: absolute;
+
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
 .mobileMenu {
   position: fixed;
   bottom: 0;
@@ -667,5 +676,8 @@ body {
     height: 80vh;
     width: 140vw;
     margin-bottom: -6vh;
+  }
+  .mobileX {
+    top: 3%;
   }
 }

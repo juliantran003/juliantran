@@ -1,16 +1,52 @@
 import Image from "next/image";
 import { getNeighborsById } from "./getNeighborsById";
 import work from "../public/json/work.json";
+import audioondark from "../public/img/misc/audio-on-dark.png";
+import audiooffdark from "../public/img/misc/audio-off-dark.png";
+import audioonlight from "../public/img/misc/audio-on-light.png";
+import audioofflight from "../public/img/misc/audio-off-light.png";
+import useHoverAudio from "./useHoverAudio";
 
 export default function MobileWorkModal({
   select,
   setSelect,
   modal,
   setModal,
+  muted,
+  setMuted,
 }) {
   const returnHandle = () => {
     setSelect();
     setModal(false);
+    setMuted(true);
+    stopHoverSound(select.audio);
+  };
+  const { playHoverSound, stopHoverSound } = useHoverAudio();
+  const clickHandle = (work) => {
+    setSelect(work);
+    if (muted) {
+      setMuted(false);
+      playHoverSound(work.audio);
+    }
+    if (!muted) {
+      setMuted(true);
+      stopHoverSound(work.audio);
+    }
+  };
+
+  const previousHandle = () => {
+    setSelect(prev);
+    stopHoverSound(select.audio);
+    if (!muted) {
+      playHoverSound(prev.audio);
+    }
+  };
+  const nextHandle = () => {
+    setSelect(next);
+    stopHoverSound(select.audio);
+    if (!muted) {
+      playHoverSound(next.audio);
+    }
   };
 
   const { prev, next } = getNeighborsById(work, select.title);
@@ -25,13 +61,25 @@ export default function MobileWorkModal({
         x
       </div>
 
-      <div className="mobileWorkModal_img">
+      <div
+        className="mobileWorkModal_img"
+        onClick={() => {
+          clickHandle(select);
+        }}
+      >
         <Image
           src={select.gif ? select.gif : select.artwork}
           fill
           alt={select.gif ? select.gif : select.artwork}
           priority
         />
+        <div className="mobileWorkModal_mute" onClick={() => setMuted(!muted)}>
+          <Image
+            src={muted === false ? audioonlight : audioofflight}
+            fill
+            alt="mute/unmute"
+          />
+        </div>
       </div>
       <p>{select.release}</p>
       <h1>{select.title}</h1>
@@ -69,7 +117,7 @@ export default function MobileWorkModal({
           <button
             className="button1"
             onClick={() => {
-              setSelect(prev);
+              previousHandle();
             }}
           >
             previous
@@ -89,7 +137,7 @@ export default function MobileWorkModal({
           <button
             className="button1"
             onClick={() => {
-              setSelect(next);
+              nextHandle();
             }}
           >
             next
