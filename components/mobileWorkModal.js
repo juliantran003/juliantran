@@ -6,6 +6,7 @@ import audiooffdark from "../public/img/misc/audio-off-dark.png";
 import audioonlight from "../public/img/misc/audio-on-light.png";
 import audioofflight from "../public/img/misc/audio-off-light.png";
 import useHoverAudio from "./useHoverAudio";
+import { useEffect, useRef } from "react";
 
 export default function MobileWorkModal({
   select,
@@ -15,6 +16,7 @@ export default function MobileWorkModal({
   muted,
   setMuted,
 }) {
+  const audioRef = useRef(null);
   const returnHandle = () => {
     setSelect();
     setModal(false);
@@ -48,6 +50,41 @@ export default function MobileWorkModal({
       playHoverSound(next.audio);
     }
   };
+  useEffect(() => {
+    if (!select) return;
+    const img = new window.Image();
+    if (select) {
+      img.src = select.artwork;
+    } // starts loading immediately
+    if (prev) {
+      img.src = prev.artwork;
+    } // starts loading immediately
+    if (next) {
+      img.src = next.artwork;
+    } // starts loading immediately
+  }, [select ? select.artwork : ""]);
+  useEffect(() => {
+    if (!select) return;
+
+    if (select) {
+      const audio = new window.Audio(select.audio);
+      audio.preload = "auto";
+      audio.load(); // forces immediate download
+      audioRef.current = audio;
+    }
+    if (prev) {
+      const audio = new window.Audio(prev.audio);
+      audio.preload = "auto";
+      audio.load(); // forces immediate download
+      audioRef.current = audio;
+    } // starts loading immediately
+    if (next) {
+      const audio = new window.Audio(next.audio);
+      audio.preload = "auto";
+      audio.load(); // forces immediate download
+      audioRef.current = audio;
+    } // starts loading immediately
+  }, [select ? select.audio : ""]);
 
   const { prev, next } = getNeighborsById(work, select.title);
   return (
