@@ -563,6 +563,40 @@ body {
 .mobileInfoModal_home_btn {
   font-family: "Tobias Thin Italic";
 }
+@media only screen and (min-width: 1700px) {
+  .home_img {
+    width: 25vw;
+    height: 25vw;
+  }
+  .home_info h1 {
+    font-size: 48px;
+  }
+  .home_info p {
+    font-size: 18px;
+  }
+  .overview > div {
+    font-size: 16px;
+  }
+  .info {
+    font-size: 16px;
+  }
+  .menu > button {
+    font-size: 34px;
+  }
+  .menu > button > span {
+    font-size: 24px;
+  }
+  .header_logo {
+    width: 55px;
+    height: 55px;
+  }
+  .playing {
+    font-size: 16px;
+  }
+  .button1 {
+    font-size: 16px;
+  }
+}
 @media only screen and (max-width: 1285px) {
   .home_img {
     width: 225px;
