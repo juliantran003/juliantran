@@ -662,9 +662,9 @@ body {
     font-size: 24px;
   }
   .mobileWorkModal_img {
-    height: 50vw;
-    width: 50vw;
-    margin-bottom: 20px;
+    height: 60vw;
+    width: 60vw;
+    margin-bottom: 0px;
   }
   .mobileWorkModal_links > a {
     font-size: 14px;
