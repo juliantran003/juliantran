@@ -9,6 +9,7 @@ import tree from "../public/img/misc/menuTree.png";
 import MobileMenu from "@/components/mobileMenu";
 import MobileWorkModal from "@/components/mobileWorkModal";
 import MobileInfoModal from "@/components/mobileInfoModal";
+import Metadata from "@/components/metadata";
 
 export default function Home() {
   const [select, setSelect] = useState();
@@ -123,10 +124,7 @@ height: 250px;
           `}
         </style>
       )} */}
-      <Metadata
-        title={select.title}
-        img={select.gif ? select.gif : select.artwork}
-      />
+      <Metadata title={select && select.title} img={select && select.artwork} />
       <Header
         select={select}
         setSelect={setSelect}
