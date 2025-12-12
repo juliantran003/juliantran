@@ -2,7 +2,7 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Menu from "@/components/menu";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import tree from "../public/img/misc/menuTree.png";
@@ -12,12 +12,29 @@ import MobileInfoModal from "@/components/mobileInfoModal";
 import Metadata from "@/components/metadata";
 
 export default function Home() {
+  const audioRef = useRef(null);
   const [select, setSelect] = useState();
   const [clicked, setClicked] = useState();
   const [muted, setMuted] = useState(true);
   const [modal, setModal] = useState(false);
   const [infoModal, setInfoModal] = useState(false);
+  useEffect(() => {
+    if (!select) return;
+    const img = new window.Image();
+    if (select) {
+      img.src = select.artwork;
+    } // starts loading immediately
+  }, [select ? select.artwork : ""]);
+  useEffect(() => {
+    if (!select) return;
 
+    if (select) {
+      const audio = new window.Audio(select.audio);
+      audio.preload = "auto";
+      audio.load(); // forces immediate download
+      audioRef.current = audio;
+    }
+  }, [select ? select.audio : ""]);
   return (
     <>
       {/* {!select && (
@@ -124,7 +141,7 @@ height: 250px;
           `}
         </style>
       )} */}
-      <Metadata title={select && select.title} img={select && select.artwork} />
+      <Metadata />
       <Header
         select={select}
         setSelect={setSelect}
