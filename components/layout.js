@@ -11,9 +11,26 @@ export default function Layout({ children }) {
           content="width=device-width, initial-scale=1.0, viewport-fit=cover"
         />
         <title>Julian Tran</title>
-        <meta name="description" content="" key="desc" />
+        <meta
+          name="description"
+          content="          Julian Tran is a composer and music producer working both within
+          different visual mediums and as an independent music artist.
+   
+          His work focuses on exploring the relationships between songwriting,
+          soundscapes and image using a blend of physical and digital
+          instruments."
+          key="desc"
+        />
         <meta property="og:title" content={"Julian Tran"} />
-        <meta property="og:description" content="" />
+        <meta
+          property="og:description"
+          content="          Julian Tran is a composer and music producer working both within
+          different visual mediums and as an independent music artist.
+   
+          His work focuses on exploring the relationships between songwriting,
+          soundscapes and image using a blend of physical and digital
+          instruments."
+        />
         <meta property="og:image" content="/favicon.ico" />
         <meta
           name="keywords"

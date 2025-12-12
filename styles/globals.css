@@ -152,6 +152,11 @@ body {
 .mobileHeader_container img {
   margin-left: -4px;
 }
+.mobileHeader_container > a {
+  width: 20%;
+  font-size: 16px;
+  text-align: center;
+}
 .mobileHeader_container > button {
   width: 20%;
   font-size: 16px;
@@ -664,6 +669,9 @@ body {
     font-size: 14px;
   }
   .mobileHeader_container > button {
+    font-size: 14px;
+  }
+  .mobileHeader_container > a {
     font-size: 14px;
   }
   .mobileHeader_container {

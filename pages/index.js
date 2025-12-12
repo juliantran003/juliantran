@@ -123,6 +123,10 @@ height: 250px;
           `}
         </style>
       )} */}
+      <Metadata
+        title={select.title}
+        img={select.gif ? select.gif : select.artwork}
+      />
       <Header
         select={select}
         setSelect={setSelect}

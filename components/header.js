@@ -42,7 +42,10 @@ export default function Header({
         <div className="header_logo" onClick={() => setSelect()}>
           <Image src={logo} fill alt="logo" />
         </div>
-        <button className="button1">contact</button>
+
+        <a className="button1" href="mailto:julian@juliantran.co">
+          contact
+        </a>
       </div>
 
       {/* DESKTOP */}
@@ -82,7 +85,9 @@ export default function Header({
               />
             </div>
           }
-          <button className="button1">contact</button>
+          <a className="button1" href="mailto:julian@juliantran.co">
+            contact
+          </a>
         </div>
       </div>
     </header>
