@@ -693,6 +693,9 @@ body {
     margin: 20px 0 5px 0;
     font-size: 14px;
   }
+  .mobileInfoModal p {
+    margin-bottom: 40px;
+  }
   .mobileWorkModal h1 {
     font-size: 24px;
   }

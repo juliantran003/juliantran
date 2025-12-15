@@ -183,7 +183,7 @@ height: 250px;
             select={select}
             setSelect={setSelect}
           />
-        )}
+        )}{" "}
         {select && (
           <MobileWorkModal
             modal={modal}
