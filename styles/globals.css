@@ -680,12 +680,13 @@ body {
     display: none;
   }
 }
-@media only screen and (max-height: 700px) {
+
+@media only screen and (max-height: 800px) {
   .mobileMenu > button {
     margin-top: 2vh;
   }
   .mobileWorkModal {
-    height: 70vh;
+    height: 75vh;
     top: 80px;
   }
   .mobileWorkModal p {
@@ -696,8 +697,8 @@ body {
     font-size: 24px;
   }
   .mobileWorkModal_img {
-    height: 60vw;
-    width: 60vw;
+    height: 55vw;
+    width: 55vw;
     margin-bottom: 0px;
   }
   .mobileWorkModal_links > a {
