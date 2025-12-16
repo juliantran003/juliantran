@@ -683,7 +683,7 @@ body {
 
 @media only screen and (max-height: 800px) {
   .mobileMenu > button {
-    margin-top: 2vh;
+    margin-top: 2.5vh;
   }
   .mobileWorkModal {
     height: 80vh;
