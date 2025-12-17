@@ -672,16 +672,15 @@ body {
     display: flex;
   }
 }
-@media only screen and (max-height: 500px) {
-  .footer {
-    display: none;
-  }
-  .header {
-    display: none;
+
+@media only screen and (max-height: 1000px) {
+  .mobileWorkModal {
+    height: 73vh;
+    top: 100px;
   }
 }
 
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 700px) {
   .mobileMenu > button {
     margin-top: 2.5vh;
   }
