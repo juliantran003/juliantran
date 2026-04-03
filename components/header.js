@@ -43,7 +43,7 @@ export default function Header({
           <Image src={logo} fill alt="logo" />
         </div>
 
-        <a className="button1" href="mailto:julian@juliantran.co">
+        <a className="button1" href="mailto:contact@juliantran.co">
           contact
         </a>
       </div>
@@ -85,7 +85,7 @@ export default function Header({
               />
             </div>
           }
-          <a className="button1" href="mailto:julian@juliantran.co">
+          <a className="button1" href="mailto:contact@juliantran.co">
             contact
           </a>
         </div>
