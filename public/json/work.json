@@ -76,11 +76,11 @@
     "audio": "/audio/ecfc.m4a"
   },
   {
-    "title": "Fantasy Unlimited ",
+    "title": "Fantasy Unlimited",
     "type": "album",
     "url": "fantasy",
     "release": "2023",
-    "artwork": "/img/artwork/fu1.png",
+    "artwork": "/img/artwork/fu.jpg",
     "design": "Tom Brett",
     "audio": "/audio/fu.m4a",
     "listen": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited--part-i-2",
@@ -128,15 +128,5 @@
     "gif": "/img/gif/riku.gif",
     "director": "Tom Brett",
     "audio": "/audio/riku.m4a"
-  },
-  {
-    "title": "Misery",
-    "type": "album",
-    "url": "misery",
-    "release": "2021",
-    "listen": "https://distrokid.com/hyperfollow/juliantran/misery",
-    "artwork": "/img/artwork/misery.png",
-    "design": "Somnath Bhatt",
-    "audio": "/audio/interlude.m4a"
   }
 ]

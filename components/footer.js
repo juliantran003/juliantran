@@ -168,7 +168,7 @@ export default function Footer({ setSelect, select, muted }) {
             );
           })}
           <div className="dotted"></div>{" "}
-          {!select ? (
+          {/* {!select ? (
             <div className="">2021</div>
           ) : (
             <div
@@ -176,7 +176,7 @@ export default function Footer({ setSelect, select, muted }) {
             >
               2021
             </div>
-          )}
+          )} */}
           <div className="dotted"></div>
           {work.map((work) => {
             return (
