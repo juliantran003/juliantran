@@ -7,22 +7,27 @@
 
 /* Fonts */
 @font-face {
+  font-display: swap;
   font-family: "Aqala";
   src: url("../public/fonts/Aqala Display Free.ttf");
 }
 @font-face {
+  font-display: swap;
   font-family: "Tobias Light";
   src: url("../public/fonts/Tobias-TRIAL-Light.ttf");
 }
 @font-face {
+  font-display: swap;
   font-family: "Tobias Light Italic";
   src: url("../public/fonts/Tobias-TRIAL-LightItalic.ttf");
 }
 @font-face {
+  font-display: swap;
   font-family: "Tobias Thin";
   src: url("../public/fonts/Tobias-TRIAL-Thin.ttf");
 }
 @font-face {
+  font-display: swap;
   font-family: "Tobias Thin Italic";
   src: url("../public/fonts/Tobias-TRIAL-ThinItalic.ttf");
 }
@@ -727,3 +732,32 @@ body {
     top: 3%;
   }
 }
+
+/* Controls retain the original typography and layout. */
+button { color: inherit; }
+.header_logo { border: 0; padding: 0; background: none; }
+.mobileHeader_container > .header_logo { width: 45px; }
+.menu > button > .project-name { font-size: inherit; margin-left: 0; opacity: 1; }
+.overview > button { border: 0; background: none; opacity: .3; width: auto; margin-top: -12px; white-space: nowrap; padding: 0 5px; font-family: "Tobias Thin Italic"; font-size: 14px; text-transform: lowercase; height: 14px; }
+button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+button:disabled { opacity: .25; cursor: default; }
+.project-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.motion-toggle { position: absolute; right: 6px; bottom: 6px; z-index: 1; border: 0; padding: 4px 6px; background: #f5f2ecd9; font: 11px "Tobias Light", serif; cursor: pointer; }
+.player-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 12px; margin-top: 12px; }
+.player-controls button { padding: 0; }
+.player-controls [role="status"] { font: 13px "Tobias Light", serif; max-width: 240px; }
+.mobileWorkModal { overflow-y: auto; overscroll-behavior: contain; padding-bottom: 16px; box-sizing: border-box; }
+.mobileWorkModal_img { flex-shrink: 0; }
+.mobileWorkModal .player-controls { justify-content: center; padding: 0 16px; }
+.mobileWorkModal .home_buttons { justify-content: center; }
+.mobileWorkModal_nav { position: static; flex-shrink: 0; display: flex; justify-content: space-between; width: 90%; margin-top: auto; padding-top: 20px; }
+.loading-shell { display: grid; min-height: 60vh; place-content: center; text-align: center; gap: 12px; font-family: "Tobias Light", serif; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .playing { position: static; }
+  .playing span { padding-left: 0; }
+}
+
+.playing_container { width: 190px; overflow: hidden; position: relative; min-height: 16px; padding-bottom: 0; }
+.playing { width: 100%; }
+.mobileWorkModal [hidden] { display: none; }

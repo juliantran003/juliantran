@@ -1,41 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Julian Tran portfolio
 
-## Getting Started
+A Next.js Pages Router portfolio for Julian Tran. Uses Node.js 22 or later and npm.
 
-First, run the development server:
+## Develop and validate
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```sh
+npm ci
+npm test
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For development, use `npm run dev`. The existing hosting integration can build with `npm run build`; no environment secrets are required. Use a hosting runtime that supports Node.js 22 and Next.js 16.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Media and playback
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Projects live in `public/json/work.json`. Preserve stable `url` identifiers.
+- Artwork uses WebP (up to 1200 px), responsive Next Image sizes and tiny inline blur placeholders. The previous image stays visible until the next one loads.
+- Animated previews use silent H.264 MP4 loops with fast-start metadata and WebP posters. Reduced-motion users see stills; everyone can pause animation. Hidden tabs pause video.
+- One shared audio element loads only on an explicit play action. Project hover previews artwork without starting sound. Selecting a different project, returning home, changing layout or leaving the page stops playback. Muting is independent of play/pause.
+- Only the active desktop/mobile media view mounts. No catalogue-wide image or audio preload is emitted.
+- M4A audio previews are unchanged. Unreferenced source media was removed from the current tree; originals remain recoverable from Git history.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Verification
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+`npm test` covers playback cancellation, stale promises, mute, track switching, error recovery, cleanup and referenced media existence. Run `npm run build` before deployment. Browser checks should include desktop/mobile, project switching, mute, next/previous, Escape, focus return and reduced motion.
 
-## Learn More
+The five GIFs (36.11 MB combined) were replaced by MP4 previews (0.66 MB combined). These are asset-size savings, not a claimed measured page-load speedup.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# juliantran
+Existing typography and copy are preserved. Font licensing remains the owner's responsibility; this change does not add or relicense fonts.

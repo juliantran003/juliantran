@@ -1,20 +1,4 @@
 import work from "../public/json/work.json";
-
-export default function MobileMenu({ select, setSelect, modal, setModal }) {
-  return (
-    <menu className="mobileMenu">
-      {work.map((work) => {
-        return (
-          <button
-            onClick={() => {
-              setSelect(work);
-              setModal(true);
-            }}
-          >
-            {work.title}
-          </button>
-        );
-      })}
-    </menu>
-  );
+export default function MobileMenu({ open }) {
+  return <menu className="mobileMenu" aria-label="Projects">{work.map(item => <button key={item.url} onClick={() => open(item)}>{item.title}</button>)}</menu>;
 }

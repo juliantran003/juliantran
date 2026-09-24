@@ -1,54 +1,7 @@
-"use client";
-
-// Imports
 import work from "../public/json/work.json";
-
-import useHoverAudio from "./useHoverAudio";
-
-export default function Menu({
-  setSelect,
-  select,
-  clicked,
-  setClicked,
-  muted,
-  setMuted,
-}) {
-  const { playHoverSound, stopHoverSound } = useHoverAudio();
-
-  const clickHandle = (work) => {
-    setClicked(work);
-    setSelect(work);
-    if (muted) {
-      setMuted(false);
-      playHoverSound(work.audio);
-    }
-    if (!muted) {
-      setMuted(true);
-      stopHoverSound(work.audio);
-    }
-  };
-  return (
-    <menu className="menu">
-      {work.map((work) => {
-        return (
-          <button
-            onClick={() => {
-              clickHandle(work);
-            }}
-            onMouseEnter={() => {
-              setSelect(work);
-              if (!muted) {
-                playHoverSound(work.audio);
-              }
-            }}
-            onMouseLeave={stopHoverSound}
-            // onMouseLeave={() => setSelect()}
-          >
-            <p>{work.title}</p>
-            <span>{work.type}</span>
-          </button>
-        );
-      })}
-    </menu>
-  );
+export default function Menu({ selectWork, playWork }) {
+  return <menu className="menu" aria-label="Projects">{work.map(item => <button key={item.url}
+    onClick={() => playWork(item)} onMouseEnter={() => selectWork(item)} onFocus={() => selectWork(item)}>
+    <span className="project-name">{item.title}</span><span>{item.type}</span>
+  </button>)}</menu>;
 }

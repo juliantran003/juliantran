@@ -1,95 +1,24 @@
-// Imports
-"use client";
-
-import { usePathname } from "next/navigation";
 import Image from "next/image";
+import audioOn from "../public/img/misc/audio-on-dark.png";
+import audioOff from "../public/img/misc/audio-off-dark.png";
 import logo from "../public/img/misc/logo.png";
-import audioondark from "../public/img/misc/audio-on-dark.png";
-import audiooffdark from "../public/img/misc/audio-off-dark.png";
-import audioonlight from "../public/img/misc/audio-on-light.png";
-import audioofflight from "../public/img/misc/audio-off-light.png";
-import { useState } from "react";
-
-export default function Header({
-  select,
-  setSelect,
-  clicked,
-  muted,
-  setMuted,
-  infoModal,
-  setInfoModal,
-  modal,
-  setModal,
-}) {
-  const muteFunction = () => {
-    setMuted(!muted);
-  };
-  const pathname = usePathname();
-  return (
-    <header className="header">
-      {/* MOBILE */}
-      <div className="mobileHeader_container">
-        <button
-          className="button1"
-          onClick={() => {
-            setInfoModal(!infoModal);
-            setSelect();
-            setModal(false);
-          }}
-        >
-          info
-        </button>
-        <div className="header_logo" onClick={() => setSelect()}>
-          <Image src={logo} fill alt="logo" />
-        </div>
-
-        <a className="button1" href="mailto:contact@juliantran.co">
-          contact
-        </a>
+import { useAudio } from "./audioContext";
+export default function Header({ home, showInfo }) {
+  const player = useAudio();
+  const label = player.status === "playing" ? `now playing : ${player.track.title}` : player.status === "loading" ? "loading preview…" : "sound paused";
+  return <header className="header">
+    <div className="mobileHeader_container">
+      <button className="button1" onClick={showInfo}>info</button>
+      <button className="header_logo" onClick={home} aria-label="Home"><Image src={logo} fill sizes="(min-width: 1700px) 55px, 45px" alt="Julian Tran" /></button>
+      <a className="button1" href="mailto:contact@juliantran.co">contact</a>
+    </div>
+    <div className="header_container">
+      <div><button className="header_logo" onClick={home} aria-label="Home"><Image src={logo} fill sizes="(min-width: 1700px) 55px, 45px" alt="Julian Tran" /></button></div>
+      <div className="header_info">
+        <div className="playing_container" role="status"><p className="playing"><span>{label} &nbsp;✹&nbsp;</span></p></div>
+        <button className="header_mute button1" onClick={player.toggleMute} aria-pressed={player.muted} aria-label={player.muted ? "Unmute preview" : "Mute preview"}><Image src={player.muted ? audioOff : audioOn} fill sizes="20px" alt="" /></button>
+        <a className="button1" href="mailto:contact@juliantran.co">contact</a>
       </div>
-
-      {/* DESKTOP */}
-      <div className="header_container">
-        <div>
-          <div className="header_logo" onClick={() => setSelect()}>
-            <Image src={logo} fill alt="logo" />
-          </div>
-          {/* {select && (
-            <button className="button2" onClick={() => setSelect()}>
-              LATEST RELEASE
-            </button>
-          )} */}
-        </div>
-
-        <div className="header_info">
-          <div className="playing_container">
-            <p className="playing">
-              <span>
-                now playing : {select ? select.title : "Hell"}{" "}
-                &nbsp;✹&nbsp;&nbsp;
-              </span>
-            </p>
-            <p className="playing playing2">
-              <span>
-                now playing : {select ? select.title : "Hell"}{" "}
-                &nbsp;✹&nbsp;&nbsp;
-              </span>
-            </p>
-          </div>
-          {
-            <div className="header_mute" onClick={() => muteFunction()}>
-              <Image
-                src={muted === false ? audioondark : audiooffdark}
-                fill
-                alt="mute/unmute"
-              />
-            </div>
-          }
-          <a className="button1" href="mailto:contact@juliantran.co">
-            contact
-          </a>
-        </div>
-      </div>
-    </header>
-  );
+    </div>
+  </header>;
 }

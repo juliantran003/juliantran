@@ -6,10 +6,12 @@
     "release": "2025",
     "watch": "https://www.nowness.com/series/nowness-experiments/hell-tom-brett",
     "listen": "https://distrokid.com/hyperfollow/juliantran/hell",
-    "artwork": "/img/artwork/hell.jpg",
-    "gif": "/img/gif/hell.gif",
+    "artwork": "/img/artwork/hell.webp",
     "director": "Tom Brett",
-    "audio": "/audio/hell.m4a"
+    "audio": "/audio/hell.m4a",
+    "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQABAAA8BgJQAAXOk2KQdAAP74URxfKEHV3+inet2/51uEev3sC+uMTly4O0vjFCm2R78SAfyJ+m1Dlx4FBfzf1/3V8qAA",
+    "video": "/video/hell.mp4",
+    "poster": "/video/hell.webp"
   },
   {
     "title": "Your Touch Underwater",
@@ -17,9 +19,10 @@
     "url": "underwater",
     "release": "2025",
     "listen": "https://distrokid.com/hyperfollow/juliantran/your-touch-underwater-3",
-    "artwork": "/img/artwork/underwater.png",
+    "artwork": "/img/artwork/underwater.webp",
     "design": "Tom Brett",
-    "audio": "/audio/ytu.m4a"
+    "audio": "/audio/ytu.m4a",
+    "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQABAAA8BgJYwCdAClJ29LuQAAzhNjO6c6dtbmXQcyHGz7RNlHoZSDbmBWgTyvKoi99B4pNy2wg/kKnczkzHnnPienWLSj77dwAA=="
   },
   {
     "title": "Everything About You",
@@ -27,9 +30,10 @@
     "url": "everything",
     "release": "2025",
     "listen": "https://distrokid.com/hyperfollow/juliantran/everything-about-you",
-    "artwork": "/img/artwork/everything.png",
+    "artwork": "/img/artwork/everything.webp",
     "design": "Tom Brett",
-    "audio": "/audio/everything.m4a"
+    "audio": "/audio/everything.m4a",
+    "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQABAAA8BgJQAAXFhtrUAAAP7F5bG/uffi4xW/fuOpzTHO5Sa/OZe3LXrsB9d80IXZ1C2vbLauaUHdwD+g9gPAAAA="
   },
   {
     "title": "Soft Reset",
@@ -37,10 +41,12 @@
     "url": "softreset",
     "release": "2025",
     "watch": "https://hannepeeraer.co.uk/",
-    "artwork": "/img/artwork/softreset.png",
-    "gif": "/img/gif/soft-reset.gif",
+    "artwork": "/img/artwork/softreset.webp",
     "artist": "Hanne Peeraer",
-    "audio": "/audio/soft.m4a"
+    "audio": "/audio/soft.m4a",
+    "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoQAAsAA8BgJYwAAeooYJoQwAD+b8prw5eRjJ7ZviGMM9v7oozoN91Zu4WUAA==",
+    "video": "/video/soft-reset.mp4",
+    "poster": "/video/soft-reset.webp"
   },
   {
     "title": "Chapel Drive",
@@ -48,9 +54,10 @@
     "url": "chapeldrive",
     "release": "2024",
     "listen": "https://distrokid.com/hyperfollow/juliantran/chapel-drive",
-    "artwork": "/img/artwork/chapeldrive.jpg",
+    "artwork": "/img/artwork/chapeldrive.webp",
     "design": "Madeline Woods",
-    "audio": "/audio/chapel.m4a"
+    "audio": "/audio/chapel.m4a",
+    "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAQCdASoQABAAA8BgJZgCdADQjauAAM3D3H2IlQsw6QOtonNvG5JHmIrgTmnLPBTGVbTB1WeWc38iSAAAAA=="
   },
   {
     "title": "Coast to Coast",
@@ -58,10 +65,12 @@
     "url": "coast",
     "release": "2023",
     "watch": "https://zeyuanren.com/Coast-to-Coast-Preamble",
-    "artwork": "/img/artwork/coast2.png",
-    "gif": "/img/gif/coast.gif",
+    "artwork": "/img/artwork/coast2.webp",
     "director": "Zeyuan Ren",
-    "audio": "/audio/coast.m4a"
+    "audio": "/audio/coast.m4a",
+    "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACQAQCdASoQAAkAA8BgJZwAAtRjOAAA/un8pfxQl4o9p0ZqHd9tGal1nNbip+lV7gAAAA==",
+    "video": "/video/coast.mp4",
+    "poster": "/video/coast.webp"
   },
   {
     "title": "Ecfc",
@@ -70,42 +79,45 @@
     "release": "2023",
     "watch": "https://lilanyang.studio/ecfc.html",
     "listen": "https://distrokid.com/hyperfollow/juliantran/lilan-2",
-    "artwork": "/img/artwork/ecfc.png",
-    "gif": "/img/gif/ecfc.gif",
+    "artwork": "/img/artwork/ecfc.webp",
     "director": "Lilan Yang",
-    "audio": "/audio/ecfc.m4a"
+    "audio": "/audio/ecfc.m4a",
+    "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACQAQCdASoQAAwAA8BgJZwAAqm4e4AA/lcOS7ws/ilw6F6JbJ1Qabcd7xaUIAAA",
+    "video": "/video/ecfc.mp4",
+    "poster": "/video/ecfc.webp"
   },
   {
     "title": "Fantasy Unlimited",
     "type": "album",
     "url": "fantasy",
     "release": "2023",
-    "artwork": "/img/artwork/fu.jpg",
+    "artwork": "/img/artwork/fu.webp",
     "design": "Tom Brett",
     "audio": "/audio/fu.m4a",
     "listen": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited?ref=release",
     "collection": [
       {
         "number": 1,
-        "artwork": "/img/artwork/fu1.png",
+        "artwork": "/img/artwork/fu1.webp",
         "url": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited--part-i-2"
       },
       {
         "number": 2,
-        "artwork": "/img/artwork/fu2.png",
+        "artwork": "/img/artwork/fu2.webp",
         "url": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited--part-ii"
       },
       {
         "number": 3,
-        "artwork": "/img/artwork/fu3.png",
+        "artwork": "/img/artwork/fu3.webp",
         "url": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited--part-iii-2"
       },
       {
         "number": 4,
-        "artwork": "/img/artwork/fu4.png",
+        "artwork": "/img/artwork/fu4.webp",
         "url": "https://distrokid.com/hyperfollow/juliantran/fantasy-unlimited--part-iv"
       }
-    ]
+    ],
+    "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwAgCdASoQABAAA8BgJYwCdAYsFvOlMMtmHSAAAP7zdRRYf8tq94UMNxJTOVNfKWdLMbWreXgRpHfBGEX7z0cNL/bfNyKJ8i/476FAyH2PiGh/VtlGZRsm/1lj8/QBkitgVAAA"
   },
   {
     "title": "Another Day",
@@ -113,9 +125,10 @@
     "url": "anotherday",
     "release": "2023",
     "listen": "https://distrokid.com/hyperfollow/juliantran/another-day",
-    "artwork": "/img/artwork/anotherday.png",
+    "artwork": "/img/artwork/anotherday.webp",
     "design": "Tom Brett",
-    "audio": "/audio/another.m4a"
+    "audio": "/audio/another.m4a",
+    "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQABAAA8BgJbACdAEDfZqYuGwAAPvMTMFB3GU055GCa8+BePxO/RH6Q3pa8JuKf9zzwH28A0blkvzJkUkc2ogA"
   },
   {
     "title": "Riku's Valley",
@@ -124,9 +137,11 @@
     "release": "2022",
     "listen": "https://distrokid.com/hyperfollow/juliantran/rikus-valley",
     "watch": "https://thomas-brett.itch.io/rikusvalley",
-    "artwork": "/img/artwork/riku1.png",
-    "gif": "/img/gif/riku.gif",
+    "artwork": "/img/artwork/riku1.webp",
     "director": "Tom Brett",
-    "audio": "/audio/riku.m4a"
+    "audio": "/audio/riku.m4a",
+    "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQAA0AA8BgJZQAAudkt3nMaAAA/vd609JRZ79EHy//z3lBpCz2IaitXyNVQNbIl1SqjkvAAAA=",
+    "video": "/video/riku.mp4",
+    "poster": "/video/riku.webp"
   }
 ]

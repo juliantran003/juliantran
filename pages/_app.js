@@ -1,6 +1,6 @@
 // Styles
-import "../styles/globals.css";
 import "../styles/reset.css";
+import "../styles/globals.css";
 
 // Components
 import Layout from "../components/layout";

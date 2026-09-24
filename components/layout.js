@@ -1,66 +1,18 @@
-// IMPORTS
 import Head from "next/head";
-import work from "../public/json/work.json";
-
+import { AudioProvider } from "./audioContext";
 export default function Layout({ children }) {
-  return (
-    <>
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-        />
-        <title>Julian Tran</title>
-        <meta
-          name="description"
-          content="          Julian Tran is a composer and music producer working both within
-          different visual mediums and as an independent music artist.
-   
-          His work focuses on exploring the relationships between songwriting,
-          soundscapes and image using a blend of physical and digital
-          instruments."
-          key="desc"
-        />
-        <meta property="og:title" content={"Julian Tran"} />
-        <meta
-          property="og:description"
-          content="          Julian Tran is a composer and music producer working both within
-          different visual mediums and as an independent music artist.
-   
-          His work focuses on exploring the relationships between songwriting,
-          soundscapes and image using a blend of physical and digital
-          instruments."
-        />
-        <meta property="og:image" content="/favicon.ico" />
-        <meta
-          name="keywords"
-          content="julian, tran, artist, composer, songwriting, music, score, film, julian tran, website, julian tran website, julian tran composer, julian tran music, sound, sound artist, songwriter, singer-songwriter, julian tran singer-songwriter, julian tran artist, portfolio, julian tran portfolio"
-        />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link
-          rel="icon"
-          href="/icon?<generated>"
-          type="image/<generated>"
-          sizes="<generated>"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="/apple-icon?<generated>"
-          type="image/<generated>"
-          sizes="<generated>"
-        />
-      </Head>
-      <Head>
-        {work.map((work) => {
-          return <link rel="preload" as="image" href={work.artwork} />;
-        })}
-      </Head>
-      <Head>
-        {work.map((work) => {
-          return <link rel="preload" as="audio" href={work.audio} />;
-        })}
-      </Head>
-      <main>{children}</main>
-    </>
-  );
+  const description = "Julian Tran is a composer and music producer exploring songwriting, soundscapes and image through physical and digital instruments.";
+  return <><Head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Julian Tran — Composer &amp; Music Producer</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href="https://www.juliantran.co/" />
+    <meta property="og:type" content="website" /><meta property="og:url" content="https://www.juliantran.co/" />
+    <meta property="og:title" content="Julian Tran — Composer & Music Producer" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://www.juliantran.co/og-image.jpg" />
+    <meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.ico" /><link rel="apple-touch-icon" href="/apple-icon.ico" />
+  </Head><AudioProvider>{children}</AudioProvider></>;
 }
