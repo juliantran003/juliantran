@@ -1,6 +1,4 @@
 import Image from "next/image";
-import audioOn from "../public/img/misc/audio-on-dark.png";
-import audioOff from "../public/img/misc/audio-off-dark.png";
 import logo from "../public/img/misc/logo.png";
 import { useAudio } from "./audioContext";
 export default function Header({ home, showInfo }) {
@@ -16,7 +14,6 @@ export default function Header({ home, showInfo }) {
       <div><button className="header_logo" onClick={home} aria-label="Home"><Image src={logo} fill sizes="(min-width: 1700px) 55px, 45px" alt="Julian Tran" /></button></div>
       <div className="header_info">
         <div className="playing_container" role="status"><p className="playing"><span>{label} &nbsp;✹&nbsp;</span></p></div>
-        <button className="header_mute button1" onClick={player.toggleMute} aria-pressed={player.muted} aria-label={player.muted ? "Unmute preview" : "Mute preview"}><Image src={player.muted ? audioOff : audioOn} fill sizes="20px" alt="" /></button>
         <a className="button1" href="mailto:contact@juliantran.co">contact</a>
       </div>
     </div>

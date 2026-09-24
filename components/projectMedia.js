@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import useMediaQuery from "./useMediaQuery";
-export default function ProjectMedia({ work, sizes, eager = false }) {
+export default function ProjectMedia({ work, sizes, eager = false, onToggle, playing }) {
   const reduced = useMediaQuery("(prefers-reduced-motion: reduce)");
   const [displayed, setDisplayed] = useState(work);
   const [animate, setAnimate] = useState(true);
@@ -30,6 +30,7 @@ export default function ProjectMedia({ work, sizes, eager = false }) {
     {displayed.video && reduced === false && visible && !failed && <video ref={video} key={displayed.video}
       className="project-video" src={displayed.video} poster={displayed.poster} muted loop playsInline
       preload="none" aria-hidden="true" onError={() => setFailed(true)} />}
+    {onToggle && <button className="artwork-audio-toggle" onClick={onToggle} aria-label={`${playing ? "Pause" : "Listen to"} ${work.title}`} aria-pressed={playing} />}
     {displayed.video && reduced === false && <button className="motion-toggle" aria-label={animate ? "Pause animation" : "Play animation"}
       onClick={() => setAnimate(!animate)}>{animate ? "pause image" : "play image"}</button>}
   </>;

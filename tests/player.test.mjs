@@ -24,7 +24,7 @@ test('a rejected browser play request becomes a recoverable error', async () => 
   const audio = new AudioDouble(); let state;
   audio.play = () => Promise.reject(Object.assign(new Error('blocked'), {name:'NotAllowedError'}));
   const player = createPlayer(audio, next => { state = next; });
-  await player.play(first); assert.equal(state.status, 'error'); assert.match(state.error, /Press play/);
+  await player.play(first); assert.equal(state.status, 'error'); assert.match(state.error, /Select the project/);
   audio.play = () => Promise.resolve(); await player.play(first); assert.equal(state.status, 'playing'); assert.equal(state.error, '');
 });
 test('closing while play is pending cannot report that audio is still playing', async () => {
