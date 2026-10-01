@@ -110,32 +110,21 @@ body {
   justify-content: flex-end;
 }
 
-.playing {
+ .playing {
   font-family: "Tobias Thin Italic";
   font-size: 14px;
-  margin: 0 auto;
+  margin: 0;
   white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
+  display: flex;
+  width: max-content;
+  flex-shrink: 0;
+  animation: playing 120s linear infinite;
 }
-
-.playing span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: playing 10s linear infinite;
-}
-
-.playing2 span {
-  animation-delay: 5s;
-}
-
+.playing-group { display: flex; flex-shrink: 0; }
+.playing-item { display: block; flex-shrink: 0; padding-right: 0; }
 @keyframes playing {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, 0);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .header_mute {
@@ -742,7 +731,6 @@ button { color: inherit; }
 button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 button:disabled { opacity: .25; cursor: default; }
 .project-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.motion-toggle { position: absolute; right: 6px; bottom: 6px; z-index: 1; border: 0; padding: 4px 6px; background: #f5f2ecd9; font: 11px "Tobias Light", serif; cursor: pointer; }
 .player-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 12px; margin-top: 12px; }
 .player-controls button { padding: 0; }
 .player-controls [role="status"] { font: 13px "Tobias Light", serif; max-width: 240px; }
@@ -759,10 +747,17 @@ button:disabled { opacity: .25; cursor: default; }
 }
 
 .playing_container { width: 190px; overflow: hidden; position: relative; min-height: 16px; padding-bottom: 0; }
-.playing { width: 100%; }
+
 .mobileWorkModal [hidden] { display: none; }
 
 .artwork-audio-toggle { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; }
-.motion-toggle { z-index: 2; }
 .audio-status { display: block; font: 13px "Tobias Light", serif; margin-top: 10px; }
 .header_info > .playing_container { margin-right: 30px; }
+
+.mobile-sound-icon { position: absolute; right: 10px; bottom: 10px; width: 27px; height: 27px; color: white; opacity: .85; pointer-events: none; filter: drop-shadow(0 1px 2px rgba(0,0,0,.75)); }
+.mobile-sound-icon svg { display: block; width: 100%; height: 100%; }
+.artwork-audio-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+.playing_container { justify-content: flex-start; }
+
+.playing_container { display: block; }

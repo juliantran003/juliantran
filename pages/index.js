@@ -29,7 +29,7 @@ export default function Home() {
       {mobile === false && <><Menu selectWork={selectWork} playWork={playWork} />
         <main className="home"><div className="home_container">
           <div className="home_img"><ProjectMedia work={select} onToggle={() => player.toggle(select)} playing={player.active} eager={select.url === work[0].url} sizes="(min-width: 1700px) 25vw, (max-width: 1090px) 175px, (max-width: 1285px) 225px, 275px" /></div>
-          <div className="home_info"><ProjectDetails work={select} /><span role="status" className="audio-status">{player.error || (player.status === "loading" ? "loading…" : "")}</span></div>
+          <div className="home_info"><ProjectDetails work={select} />{player.error && <span role="status" className="audio-status">{player.error}</span>}</div>
         </div></main><Footer select={select} selectWork={selectWork} playWork={playWork} /></>}
       {mobile === true && <main className="mobileHome">
         <div className="mobileHome_tree"><Image src={tree} fill sizes="140vw" alt="" preload /></div>

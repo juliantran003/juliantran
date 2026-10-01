@@ -1,7 +1,9 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { createPlayer } from "../lib/player.mjs";
+import { useMediaCache } from "./mediaPreload";
 const AudioContext = createContext(null);
 export function AudioProvider({ children }) {
+  const { resolve } = useMediaCache();
   const element = useRef(null);
   const player = useRef(null);
   const enabled = useRef(false);
@@ -19,10 +21,10 @@ export function AudioProvider({ children }) {
   }, []);
   const toggle = track => {
     if (enabled.current) { enabled.current = false; setActive(false); player.current?.pause(); }
-    else { enabled.current = true; setActive(true); current.current = track.audio; player.current?.play(track); }
+    else { enabled.current = true; setActive(true); current.current = track.audio; player.current?.play({ ...track, audio: resolve(track.audio) }); }
   };
   const follow = track => {
-    if (enabled.current && current.current !== track.audio) { current.current = track.audio; player.current?.play(track); }
+    if (enabled.current && current.current !== track.audio) { current.current = track.audio; player.current?.play({ ...track, audio: resolve(track.audio) }); }
   };
   return <AudioContext.Provider value={{ ...state, active, toggle, follow, stop }}>
     <audio ref={element} preload="none" />{children}

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { AudioProvider } from "./audioContext";
+import { MediaPreloadProvider } from "./mediaPreload";
 export default function Layout({ children }) {
   const description = "Julian Tran is a composer and music producer exploring songwriting, soundscapes and image through physical and digital instruments.";
   return <><Head>
@@ -14,5 +15,5 @@ export default function Layout({ children }) {
     <meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/favicon.ico" /><link rel="apple-touch-icon" href="/apple-icon.ico" />
-  </Head><AudioProvider>{children}</AudioProvider></>;
+  </Head><MediaPreloadProvider><AudioProvider>{children}</AudioProvider></MediaPreloadProvider></>;
 }
